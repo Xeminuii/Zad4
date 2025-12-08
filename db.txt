@@ -4,3 +4,4 @@ Krzysztof 20
 Janusz 40
 marek 20
 adam 22
+adam 32 sroka
