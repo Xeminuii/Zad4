@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-    System.out.println("1 - add student");
+    System.out.println("1 - add student, 2 - show students");
     try {
       Service s = new Service();
       Scanner sc = new Scanner(System.in);
@@ -24,14 +24,14 @@ class Main {
           System.out.println("Podaj wiek");
           int age = sc.nextInt();
           s.addStudent(new Student(name, age));
-          // break;
-      // }
-          // case 2:
+          break;
+          
+          case 2:
           var students = s.getStudents();
           for(Student current : students) {
             System.out.println(current.ToString());
             }
-          // break;
+          break;
       }
     } catch (IOException e) {
 
