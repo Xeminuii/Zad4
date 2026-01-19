@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-    System.out.println("1 - add student, 2 - show students");
+    System.out.println("1 - add student, 2 - show students, 3 - find student by name");
     try {
       Service s = new Service();
       Scanner sc = new Scanner(System.in);
@@ -35,6 +35,15 @@ class Main {
           for(Student current : students) {
             System.out.println(current.ToString());
             }
+          break;
+
+        case 3:
+          System.out.println("Podaj imie");
+          String name2 = sc.next();
+          var students2 = s.getStudents();
+          for(Student current : students2)
+            if(current.GetName().equals(name2))
+              System.out.println(current.ToString());
           break;
       }
     } catch (IOException e) {
