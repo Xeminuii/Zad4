@@ -25,7 +25,9 @@ class Main {
           int age = sc.nextInt();
           System.out.println("Podaj nazwisko");
           String surname = sc.next();
-          s.addStudent(new Student(name, age, surname));
+          System.out.println("Podaj date urodzenia");
+          String datauro = sc.next();
+          s.addStudent(new Student(name, age, surname, datauro));
           break;
           
           case 2:
