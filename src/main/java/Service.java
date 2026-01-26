@@ -30,6 +30,25 @@ public class Service {
     return ret;
   }
 
+public void removeStudentByName(String name) throws IOException {
+  var students = getStudents();
+  var updatedStudents = new ArrayList<Student>();
+  for (Student student : students) {
+    if (!student.GetName().equals(name)) {
+      updatedStudents.add(student);
+    }
+  }
+  var f = new FileWriter("db.txt", false);
+  var b = new BufferedWriter(f);
+  for (Student student : updatedStudents) {
+    b.append(student.ToString());
+    b.newLine();
+  }
+  b.close();
+}
+  
+
+  
   public Student findStudentByName(String name) {
     return null;
   }

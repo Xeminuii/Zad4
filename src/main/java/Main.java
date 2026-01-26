@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-    System.out.println("1 - add student, 2 - show students, 3 - find student by name");
+    System.out.println("1 - add student, 2 - show students, 3 - find student by name, 4 - remove student");
     try {
       Service s = new Service();
       Scanner sc = new Scanner(System.in);
@@ -45,6 +45,13 @@ class Main {
             if(current.GetName().equals(name2))
               System.out.println(current.ToString());
           break;
+
+        case 4:
+          System.out.println("Podaj imie");
+          String name3 = sc.next();
+          s.removeStudentByName(name3);
+          break;
+          
       }
     } catch (IOException e) {
 

@@ -1,3 +1,2 @@
 kamil 25 dudek 13,02,2000
-kamil 22 dudek 13,02,2000
-karol 25 dudek 13,02,2000
+kamil 22 poda 13,02,2000
